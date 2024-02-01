@@ -1,3 +1,7 @@
+//Implement a solution for aConstraint SatisfactionProblemusingBranchandBoundand
+// Backtracking for n-queens problemora graph coloringproblem
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -116,7 +120,9 @@ int main()
 
     return 0;
 }
-/*
+
+
+/* output
 N = 4
 . . Q .
 Q . . .

@@ -1,66 +1,44 @@
+// Implement Greedy search algorithm for any one of the following application: Minimum Spanning Tree (kruskal)
+
+
 #include<iostream>
-
 #include <algorithm>
-
 #include<vector>
-
 using namespace std;
 
 
 class edge{
-
     public:
-
     int s;
-
     int d;
-
     int w;
-
     edge(){
-
-
     }
 
     edge(int src,int des,int wei){
-
         s=src;
-
         d=des;
-
         w=wei;
-
     }
-
 };
 
 
 bool compare(edge e1,edge e2){
-
     return e1.w<e2.w;
 
 }
 
-
 int findparent(int i,int* parent ){
-
     if(parent[i]==i)
-
         return i;
-
     return findparent(parent[i],parent);
-
 }
 
 
 class graph{
-
     public:
-
     int e,n;
-
     edge* v;
-
 
     graph(int n,int e){
 
@@ -170,25 +148,24 @@ int main(){
 
 }
 
+//Output
+//KRUSKAL'S ALGORITHM
+//ENTER NUMBER OF VERTICES :      6
+//ENTER NUMBER OF EDGEES :        8
+//ENTER VERTICES AND WEIGHT OF EDGE 1 :   1 2 4
+//ENTER VERTICES AND WEIGHT OF EDGE 2 :   2 3 2
+//ENTER VERTICES AND WEIGHT OF EDGE 3 :   1 2 4
+//ENTER VERTICES AND WEIGHT OF EDGE 4 :   3 4 3
+//ENTER VERTICES AND WEIGHT OF EDGE 5 :   3 5 2
+//ENTER VERTICES AND WEIGHT OF EDGE 6 :   3 6 4
+//ENTER VERTICES AND WEIGHT OF EDGE 7 :   4 6 3
+//ENTER VERTICES AND WEIGHT OF EDGE 8 :   5 6 3
 
- output
-KRUSKAL'S ALGORITHM
-ENTER NUMBER OF VERTICES :      6
-ENTER NUMBER OF EDGEES :        8
-ENTER VERTICES AND WEIGHT OF EDGE 1 :   1 2 4
-ENTER VERTICES AND WEIGHT OF EDGE 2 :   2 3 2
-ENTER VERTICES AND WEIGHT OF EDGE 3 :   1 2 4
-ENTER VERTICES AND WEIGHT OF EDGE 4 :   3 4 3
-ENTER VERTICES AND WEIGHT OF EDGE 5 :   3 5 2
-ENTER VERTICES AND WEIGHT OF EDGE 6 :   3 6 4
-ENTER VERTICES AND WEIGHT OF EDGE 7 :   4 6 3
-ENTER VERTICES AND WEIGHT OF EDGE 8 :   5 6 3
+//-------MST-------
+//2       3       2
+//3       5       2
+//3       4       3
+//4       6       3
+//1       2       4
 
--------MST-------
-2       3       2
-3       5       2
-3       4       3
-4       6       3
-1       2       4
-
-WEIGHT OF MST IS 14
+//WEIGHT OF MST IS 14
